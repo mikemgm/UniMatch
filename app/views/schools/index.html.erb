@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Schools</h1>
+<h1>Universities</h1>
 
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>Name</th>
       <th>Location</th>
       <th>Website</th>
       <th>Rank</th>
       <th>Cost</th>
-      <th>Student num</th>
+      <th>Students</th>
       <th>Content</th>
-      <th>Image</th>
-      <th>Acceptance rate</th>
+      <th>Acceptance Rate</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,6 +21,7 @@
   <tbody>
     <% @schools.each do |school| %>
       <tr>
+        <td><%= image_tag school.image %></td>  
         <td><%= school.name %></td>
         <td><%= school.location %></td>
         <td><%= school.website %></td>
@@ -28,7 +29,6 @@
         <td><%= school.cost %></td>
         <td><%= school.student_num %></td>
         <td><%= school.content %></td>
-        <td><%= school.image %></td>
         <td><%= school.acceptance_rate %></td>
         <td><%= link_to 'Show', school %></td>
         <td><%= link_to 'Edit', edit_school_path(school) %></td>
